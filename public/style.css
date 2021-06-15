@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
+@keyframes showTopText {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  50% {
+    transform: translate3d(0, -2%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes showBottomText {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+
+  30% {
+    transform: translate3d(0, 10%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.bg-banner {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  position: absolute;
+  left: -10%;
+  width: 120%;
+  height: 100vh;
+  background: radial-gradient(#e1f1e5, #acdabb);
+}
+.container #scene .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.container .layer img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color: transparent;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 800px;
+}
+.intro-section img {
+  height: 150px;
+  margin: 30vh 0 0 -8em;
+}
+
+.learn-more-btn {
+  height: 5em;
+  width: 10em;
+  border-radius: 5%;
+  box-shadow: black 5, 5, 5;
+}
+
+.text-bottom-flex {
+  display: flex;
+  justify-content: space-between;
+  height: 20em;
+  width: 100%;
+}
+
+.text-top,
+.text-bottom {
+  height: 50%;
+  overflow: hidden;
+  position: absolute;
+  width: 800px;
+}
+.animated-title {
+  display: flex;
+}
+.animated-title > div div {
+  padding: 2vmin 0;
+}
+
+.animated-title > div.text-top {
+  border-bottom: 0.3rem solid #000;
+  top: 0;
+}
+.animated-title > div.text-top div {
+  animation: showTopText 1.4s;
+  /* animation-delay: 0.5s; */
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, 100%);
+}
+.animated-title > div.text-top div span:first-child {
+  color: #767676;
+}
+.animated-title > div.text-bottom {
+  bottom: 0;
+}
+.animated-title > div.text-bottom div {
+  animation: showBottomText 1.8s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  top: 0;
+  transform: translate(0, -100%);
+}

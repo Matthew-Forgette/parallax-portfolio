@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Mousemove Parallax Effects</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <section class="bg-banner">
+    <div class="banner">
+      <div class="container">
+        <div id="scene">
+          <div class="layer"><img src="../images/sun.png" /></div>
+          <div class="layer" data-depth-x="0.25">
+            <img src="../images/mountains.png" />
+          </div>
+          <div class="layer" data-depth-y="0.15">
+            <img src="../images/clouds_right.png" />
+          </div>
+          <div class="layer" data-depth-y="-0.15">
+            <img src="../images/clouds_left.png" />
+          </div>
+          <div class="layer" data-depth-x="0.5">
+            <img src="../images/grass_01.png" />
+          </div>
+          <div class="layer" data-depth-x="-0.5">
+            <img src="../images/grass_02.png" />
+          </div>
+          <div class="layer" data-depth-x="0.50">
+            <img src="../images/sands.png" />
+          </div>
+          <div class="layer" data-depth="0.1">
+            <img src="../images/wave_01.png" />
+          </div>
+          <div class="layer" data-depth="0.35">
+            <img src="../images/boat_01.png" />
+          </div>
+          <div class="layer" data-depth="0.4">
+            <img src="../images/wave_02.png" />
+          </div>
+          <div class="layer" data-depth-x="0.5">
+            <img src="../images/boat_02.png" />
+          </div>
+          <div class="layer" data-depth="0.15">
+            <img src="../images/wave_03.png" />
+          </div>
+          <div class="layer" data-depth="0.5">
+            <img src="../images/wave_04.png" />
+          </div>
+          <div class="layer" data-depth-x="-0.5">
+            <img src="../images/boat_03.png" />
+          </div>
+          <div class="layer" data-depth-x="0.25">
+            <img src="../images/wave_05.png" />
+          </div>
+          <div class="layer" data-depth="-0.5">
+            <img src="../images/birds.png" />
+          </div>
+          <div class="layer" data-depth="0.5">
+            <img src="../images/text.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro-section">
+    <div class="intro">
+      <div class="animated-title">
+        <div class="text-top">
+          <div>
+            <img src="../images/_Matthew Forgette__.svg" alt="Matthew Forgette in svg form" />
+          </div>
+        </div>
+        <div class="text-bottom">
+          <div class="text-bottom-flex">
+            <div>
+              <p>Full-Stack Software Engineer</p>
+              <p>Specialized in both front-end and back-end development</p>
+            </div>
+            <button class="learn-more-btn">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <script>
+    var scene = document.getElementById("scene");
+    var parallax = new Parallax(scene);
+  </script>
+</body>
+
+</html>
